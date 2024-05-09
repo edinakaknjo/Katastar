@@ -1,0 +1,85 @@
+﻿@model Katastar.Models.Predmet
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Da li ste sigurni da zelite obrisati ovaj predmet ?</h3>
+<div>
+    <h4>Predmet Details</h4>
+    <hr />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Ime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Vlasnik)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Lokacija)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Dimenzija)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Zavrsen)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => modelItem.Id)
+                    </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => modelItem.Ime)
+                    </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => modelItem.Vlasnik)
+                    </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => modelItem.Lokacija)
+                    </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => modelItem.Dimenzija)
+                    </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.Zavrsen)
+                </td>
+
+                </tr>
+        
+        </tbody>
+    </table>
+
+@*         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Available)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Available)
+        </dd> *@
+        <!-- Add other properties as needed -->
+
+@*         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd> *@
+    </dl>
+
+    <form asp-action="DeletePredmet">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

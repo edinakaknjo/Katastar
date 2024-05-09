@@ -1,0 +1,67 @@
+﻿@model Katastar.Models.Arhiva
+
+@{
+    ViewData["Title"] = "Arhiva Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Vlasnik)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Vlasnik)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lokacija)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lokacija)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dimenzija)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dimenzija)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Deskripcija)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Deskripcija)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DatumDodavanja)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DatumDodavanja)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sluzbenik)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sluzbenik.FirstName) @Html.DisplayFor(model => model.Sluzbenik.LastName)
+        </dd>
+
+
+    </dl>
+</div>
+<div>
+    @* <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> | *@
+    <a asp-action="Arhiva">Back to List</a>
+</div>

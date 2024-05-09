@@ -1,0 +1,76 @@
+﻿@model Katastar.Models.Predmet
+
+@{
+    ViewData["Title"] = "CreatePredmet";
+}
+
+<h1>CreatePredmet</h1>
+
+<h4></h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreatePredmet">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Ime" class="control-label"></label>
+                <input asp-for="Ime" class="form-control" />
+                <span asp-validation-for="Ime" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Vlasnik" class="control-label"></label>
+                <input asp-for="Vlasnik" class="form-control" />
+                <span asp-validation-for="Vlasnik" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Lokacija" class="control-label"></label>
+                <input asp-for="Lokacija" class="form-control" />
+                <span asp-validation-for="Lokacija" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Dimenzija" class="control-label"></label>
+                <input asp-for="Dimenzija" class="form-control" />
+                <span asp-validation-for="Dimenzija" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Deskripcija" class="control-label"></label>
+                <textarea asp-for="Deskripcija" class="form-control"></textarea>
+                <span asp-validation-for="Deskripcija" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SluzbenikId" class="control-label">Sluzbenik:</label>
+                <select asp-for="SluzbenikId" multiple class="form-control" asp-items="@(ViewBag.Sluzbenici)"></select>
+            </div>
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Zavrsen" /> @Html.DisplayNameFor(model => model.Zavrsen)
+                </label>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
