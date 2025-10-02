@@ -4,13 +4,13 @@ KatastarApp is designed to streamline the workflow of municipal offices responsi
   <img src="./KatastarApp.png" alt="Home Screen" width="400"/>
 </div>
 
-## 👥 User Roles & Functionalities
+##  User Roles & Functionalities
 
-### 🔒 Authentication
+###  Authentication
 - Role-based access: **Administrator (head of office)**, **Clerks**, and **Citizens**
 - Each role has distinct permissions
 
-### 👤 Admin / Head of Office
+###  Admin / Head of Office
 - Authenticated via login
 - Main responsibilities:
   - Add and manage clerks
@@ -20,21 +20,21 @@ KatastarApp is designed to streamline the workflow of municipal offices responsi
   - Edit property ownership
   - Full access to case archive
 
-### 🧑‍💼 Clerk
+###  Clerk
 - Assigned by admin
 - Enters new property data: location, size, and owner info
 - Edits or updates assigned cases
 - Marks cases as finished and sends them to the admin for review
 - Access to the archive
 
-### 🧍 Citizen
+###  Citizen
 - No login required
 - Can search parcel info by ID (from physical documents)
 - Read-only access to ownership, location, and size details
 
 ---
 
-## 🗃 Database & Structure
+##  Database & Structure
 
 ![Login Screen](./KatastarLogin.png)
 
@@ -44,7 +44,7 @@ KatastarApp is designed to streamline the workflow of municipal offices responsi
 
 ---
 
-## 🛠 Technologies Used
+##  Technologies Used
 
 - **C# / .NET 7**
 - **Entity Framework Core**
@@ -54,9 +54,9 @@ KatastarApp is designed to streamline the workflow of municipal offices responsi
 
 ---
 
-## ▶️ Getting Started
+##  Getting Started
 
-### 🔧 Setup Instructions
+###  Setup Instructions
 
 1. Download the project
 2. Open the solution in Visual Studio
